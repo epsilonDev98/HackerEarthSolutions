@@ -1,0 +1,19 @@
+/*
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/print-the-numbers/
+*/
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        // Write your code here
+        Scanner sc = new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<arr.length;i++){
+            arr[i]= sc.nextInt();
+            System.out.print(arr[i]+" ");
+        }
+
+    }
+}
