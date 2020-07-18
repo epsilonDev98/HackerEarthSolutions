@@ -1,0 +1,24 @@
+/* 
+https://www.hackerearth.com/practice/basic-programming/implementation/basics-of-implementation/practice-problems/algorithm/color-the-boxes-47270a3b/
+*/
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+
+        // Write your code here
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        double x=1;
+        double mod=Math.pow(10,9)+7;
+        for(int i=1;i<m+1;i++){
+            x=(x*i)%mod;
+           
+        }
+        System.out.println((int)x);
+
+    }
+}
