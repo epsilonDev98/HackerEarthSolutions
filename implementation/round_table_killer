@@ -1,0 +1,32 @@
+/* 
+https://www.hackerearth.com/practice/basic-programming/implementation/basics-of-implementation/practice-problems/algorithm/round-table-killers-b7b93156/
+*/
+
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        // Write your code here
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        int x=sc.nextInt();
+        List<Integer> a=new ArrayList();
+        for(int i=x;i<=n;i++){
+            a.add(i);
+        }
+        for(int i=1;i<x;i++){
+            a.add(i);    
+        }
+        int m=0;
+        while(a.size()>1){
+            m=a.get(0)%k;
+            a.add(a.remove(0));
+            while(m-->0){
+                if(a.size()>1)
+                a.remove(0);
+            }
+        }
+    System.out.println(a.get(0));
+    }
+}
