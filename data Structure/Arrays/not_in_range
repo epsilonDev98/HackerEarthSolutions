@@ -1,0 +1,50 @@
+/*
+https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/not-in-range-44d19403/
+*/
+
+
+
+import java.io.*;
+import java.util.*;
+
+
+public class TestClass {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter wr = new PrintWriter(System.out);
+         int n = Integer.parseInt(br.readLine().trim());
+         int[] L = new int[n];
+         int[] R = new int[n];
+         for(int i_L=0; i_L<n; i_L++)
+         {
+         	String[] tmp = br.readLine().split(" ");
+            L[i_L] = Integer.parseInt(tmp[0]);
+         	R[i_L] = Integer.parseInt(tmp[1]);
+         	
+         }
+
+         long out_ = NotinRange(R, L, n);
+         System.out.println(out_);
+
+         wr.close();
+         br.close();
+    }
+    static long NotinRange(int[] R, int[] L, int n){
+        // Write your code here
+        boolean arr[] = new boolean[1000001];
+        for(int i=0;i<n;i++){
+            if(!arr[L[i]]||!arr[R[i]]){
+                for(int j=L[i];j<=R[i];j++){
+                    arr[j]=true;
+                }
+            }
+        }
+        long sum=0;
+        for(int i=1;i<arr.length;i++){
+            if(!arr[i]){
+                sum+=i;
+            }
+        }
+        return sum;
+    }
+}
