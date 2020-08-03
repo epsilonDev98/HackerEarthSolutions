@@ -4,6 +4,7 @@ Solution of HackerEarth problems in JAVA 8.
 
 - [x] Basic Programming
 - [ ] Data Structures
+- [ ] Algorithms
 
 
 ![](download.png)
